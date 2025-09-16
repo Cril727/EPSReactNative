@@ -5,6 +5,7 @@ import { StyleSheet } from "react-native";
 import AppNavegation from "./Src/Navegation/AppNavegation";
 
 // Pantallas
+import citas from "./Src/Navegation/Stack/CitasStack"
 import Login from "./screens/Auth/login";
 import Register from "./screens/Auth/register";
 

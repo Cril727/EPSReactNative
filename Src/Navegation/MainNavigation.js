@@ -1,10 +1,12 @@
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import { Ionicons, Feather } from '@expo/vector-icons'; 
-import InicioScreen from "../screens/InicioScreen";
-import PerfilStack from "../navigation/PerfilStack";
+import { Ionicons, Feather } from '@expo/vector-icons'; import { Home } from '../../screens/pacientes/home';
+import MainStack from './Stack/MainStack';
+import { CitasStack } from './Stack/CitasStack';
+
 
 const Tab = createBottomTabNavigator();
-import MainStack from './Stack/MainStack';
+
+
 
 export default function MainNavegation() {
   return (
@@ -24,8 +26,8 @@ export default function MainNavegation() {
       }}
     >
       <Tab.Screen 
-        name="Inicio" 
-        component={InicioScreen} 
+        name="MainStack" 
+        component={MainStack} 
         options={{
           tabBarIcon: ({ color, size }) => (
             <Ionicons name="home" color={color} size={size} />
@@ -34,8 +36,8 @@ export default function MainNavegation() {
         }}
       />
       <Tab.Screen
-        name="Perfil"
-        component={PerfilStack}
+        name="citasStack"
+        component={CitasStack}
         options={{
           tabBarIcon: ({ color, size }) => (
             <Feather name="user" size={size} color={color} />

@@ -21,7 +21,7 @@ export default function MainStack(){
             name="Usuario"
             component={Usuario}
             options={{ headerShown: false}}
-        /     
+        />     
 
         
             <Stack.Screen
