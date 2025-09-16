@@ -1,9 +1,12 @@
 import React from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import { Ionicons, Feather } from '@expo/vector-icons';
+import { Ionicons } from '@expo/vector-icons';
 import MainStack from './Stack/MainStack';
 import { CitasStack } from './Stack/CitasStack';
 import { EspecialidadesStack } from './Stack/EspecialidadStack';
+import { DoctoresStack } from './Stack/DoctoresStack';
+import { PacientesStack } from './Stack/PacientesStack';
+import { ConsultoriosStack } from './Stack/ConsultoriosStack';
 
 const Tab = createBottomTabNavigator();
 
@@ -29,39 +32,66 @@ export default function MainNavegation() {
         component={MainStack}
         options={{
           tabBarIcon: ({ color, size }) => (
-            <Ionicons name="home" color={color} size={size} />
+            <Ionicons name="home" color={color} size={size} /> 
           ),
           tabBarLabel: 'DashBoard',
         }}
       />
 
-    
+      <Tab.Screen
+        name="Especialidades"
+        component={EspecialidadesStack}
+        options={{
+          tabBarIcon: ({ color, size }) => (
+            <Ionicons name="star" size={size} color={color} /> 
+          ),
+          tabBarLabel: 'Especialidades',
+        }}
+      />
+
+      <Tab.Screen
+        name="Doctores"
+        component={DoctoresStack}
+        options={{
+          tabBarIcon: ({ color, size }) => (
+            <Ionicons name="person" size={size} color={color} /> 
+          ),
+          tabBarLabel: 'Doctores',
+        }}
+      />
+
+      <Tab.Screen
+        name="Pacientes"
+        component={PacientesStack}
+        options={{
+          tabBarIcon: ({ color, size }) => (
+            <Ionicons name="people" size={size} color={color} /> 
+          ),
+          tabBarLabel: 'Pacientes',
+        }}
+      />
 
       <Tab.Screen
         name="Citas"
         component={CitasStack}
         options={{
           tabBarIcon: ({ color, size }) => (
-            <Feather name="calendar" size={size} color={color} />
+            <Ionicons name="calendar-number" size={size} color={color} />
           ),
           tabBarLabel: 'Citas',
         }}
       />
 
-
-        <Tab.Screen
-        name="Especialidades"
-        component={EspecialidadesStack}
+      <Tab.Screen
+        name="Consultorios"
+        component={ConsultoriosStack}
         options={{
           tabBarIcon: ({ color, size }) => (
-            <Feather name="star" size={size} color={color} />
+            <Ionicons name="business" size={size} color={color} />
           ),
-          tabBarLabel: 'Especialidades',
+          tabBarLabel: 'Consultorios',
         }}
       />
     </Tab.Navigator>
-
-
-
   );
 }

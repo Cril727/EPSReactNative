@@ -1,14 +1,14 @@
 import React from 'react';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import Doctores from '../../../screens/pacientes/Doctores';
+import Pacientes from '../../../screens/pacientes/Pacientes';
 
 
 const Stack = createNativeStackNavigator();
 
-export function DoctoresStack() {
+export function PacientesStack() {
   return (
     <Stack.Navigator>
-      <Stack.Screen name="Doctores" component={Doctores} />
+      <Stack.Screen name="Pacientes" component={Pacientes} />
     </Stack.Navigator>
   );
 }

@@ -1,11 +1,12 @@
-import React from 'react';
+import React from "react"
 import { View, Text } from 'react-native';
 
-export default function Especialidades() {
+
+export default function Doctores() {
     return (
         <>
             <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-                <Text>Especialidades</Text>
+                <Text>Doctores</Text>
             </View>
         </>
     )

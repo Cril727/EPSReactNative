@@ -6,7 +6,8 @@ import {
   ScrollView,
   View,
 } from "react-native";
-import TextInputComponent from "../../components/inputComponent";
+import TextInputComponent from "../../components/TextInputComponent";
+
 
 export default function Login({ navigation }) {
   return (
@@ -52,34 +53,37 @@ export default function Login({ navigation }) {
 const styles = StyleSheet.create({
   container: {
     flexGrow: 1,
-    backgroundColor: "#E2E8F0",
+    backgroundColor: "#f1fcffff",
     justifyContent: "center",
     alignItems: "center",
-    padding: 20,
+    padding: 24,
   },
   card: {
     width: "100%",
-    maxWidth: 380,
-    backgroundColor: "#fff",
-    borderRadius: 20,
-    padding: 24,
-    shadowColor: "#000",
-    shadowOffset: { width: 0, height: 5 },
-    shadowOpacity: 0.15,
-    shadowRadius: 8,
-    elevation: 5,
+    maxWidth: 400,
+    backgroundColor: "#FFFFFF",
+    borderRadius: 18,
+    padding: 22,
+    borderWidth: 1,
+    borderColor: "#E6E1FF",
     alignItems: "center",
+    borderTopWidth: 4,
+    borderTopColor: "#28ad4eff",
+    elevation: 2,
   },
   title: {
-    fontSize: 24,
-    fontWeight: "700",
-    color: "#1E293B",
+    fontSize: 26,
+    fontWeight: "800",
+    color: "#0F172A",
+    letterSpacing: 0.2,
     marginBottom: 6,
+    textAlign: "center",
   },
   subtitle: {
-    fontSize: 15,
-    color: "#64748B",
-    marginBottom: 18,
+    fontSize: 14,
+    color: "#6B7280",
+    marginBottom: 20,
+    textAlign: "center",
   },
   form: {
     width: "100%",
@@ -88,29 +92,36 @@ const styles = StyleSheet.create({
   forgotPassword: {
     alignSelf: "flex-end",
     fontSize: 13,
-    color: "#2563EB",
-    marginBottom: 20,
+    color: "#3a64edff",
+    textDecorationLine: "underline",
+    marginBottom: 18,
   },
   button: {
-    backgroundColor: "#2563EB",
+    backgroundColor: "#42a34fff",
     paddingVertical: 14,
-    borderRadius: 12,
+    borderRadius: 999,
     width: "100%",
     alignItems: "center",
     marginBottom: 16,
+    borderWidth: 2,
+    borderColor: "#20af24ff",
   },
   buttonText: {
-    color: "#fff",
-    fontWeight: "600",
+    color: "#FFFFFF",
+    fontWeight: "800",
     fontSize: 16,
+    letterSpacing: 0.4,
+    textTransform: "uppercase",
   },
   footerText: {
     fontSize: 14,
-    color: "#475569",
+    color: "#4B5563",
     textAlign: "center",
   },
   link: {
-    color: "#2563EB",
-    fontWeight: "600",
+    color: "#2b845eff",
+    fontWeight: "700",
+    textDecorationLine: "underline",
   },
 });
+
