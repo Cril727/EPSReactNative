@@ -1,27 +1,15 @@
-import { createStackNavigator} from "@react-navigation/native";
-import ListarActividad from "../../../screens/pacientes/citas";
-import Consultas from "../../../screens/pacientes/consultas";
+import React from 'react';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import Citas from '../../../screens/pacientes/Citas';
+import Consultas from '../../../screens/pacientes/Consultorios';
 
+const Stack = createNativeStackNavigator();
 
-
-const Stack = createStackNavigator();
-
-export default function StackActivity(){
-    return(
-        <Stack.Navigator>
-            <Stack.Screen
-                name="ListarActividad"
-                component={ListarActividad}
-                options={{tittle : "Actividades"}}
-
-             />   
-
-             <Stack.Screen
-                name="Consultas"
-                component={Consultas}
-                options={{tittle : "Consultas"}}
-
-             />       
-        </Stack.Navigator>
-    )
+export default function ActivityStack() {
+  return (
+    <Stack.Navigator>
+      <Stack.Screen name="Actividad" component={Citas} options={{ title: 'Actividades' }} />
+      <Stack.Screen name="Consultas" component={Consultas} options={{ title: 'Consultas' }} />
+    </Stack.Navigator>
+  );
 }

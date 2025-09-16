@@ -1,10 +1,10 @@
 import React from 'react';
 import { View, Text } from 'react-native';
 
-export default function Citas() {
+export default function Consultorios() {
   return (
     <View style={{ flex:1, alignItems:'center', justifyContent:'center' }}>
-      <Text>Citas Screens</Text>
+      <Text>Consultorios</Text>
     </View>
   );
 }
