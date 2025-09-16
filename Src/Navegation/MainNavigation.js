@@ -15,15 +15,15 @@ export default function MainNavegation() {
     <Tab.Navigator
       screenOptions={{
         tabBarStyle: {
-          backgroundColor: '#0F172A',
+          backgroundColor: '#2690a8ff',
           borderTopWidth: 1,
-          borderTopColor: '#1E293B',
+          borderTopColor: '#0e3b82ff',
           height: 65,
           paddingBottom: 8,
           paddingTop: 8,
         },
-        tabBarActiveTintColor: '#38BDF8',
-        tabBarInactiveTintColor: '#94A3B8',
+        tabBarActiveTintColor: '#0b6a92ff',
+        tabBarInactiveTintColor: '#d9e0e9ff',
         headerShown: false,
       }}
     >
